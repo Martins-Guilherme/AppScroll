@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View, FlatList } from 'react-native';
 
+import Pessoas from './src/pessoas';
+
 class App extends Component{
 
   constructor(props){
@@ -11,6 +13,7 @@ class App extends Component{
         {id: 2, nome: 'Gustavo', idade: 22, email: 'GustavoMartins@gmail.com'},
         {id: 3, nome: 'Henrrique', idade: 32, email: 'HenrriqueM@gmail.com'},
         {id: 4, nome: 'Paulo', idade: 52, email: 'Paulomaria@gmail.com'},
+        {id: 5, nome: 'Gilberto', idade: 15, email: 'GilbertoJr@gmail.com'},
       ]
     };
   }
@@ -19,7 +22,8 @@ class App extends Component{
       <View style={styles.container}>
         <FlatList
         data={this.state.feed}
-        renderItem={ ({item}) => <Pessoa data={item} /> }
+        keyExtractor={(item) => item.id}
+        renderItem={ ({ item }) => <Pessoas data = { item } /> }
         />
 
       </View>
@@ -34,13 +38,3 @@ const styles = StyleSheet.create({
 });
 
 export default App;
-
-class Pessoa extends Component{
-  render(){
-    return(
-      <View>
-        <Text> {this.props.data.nome}</Text>
-      </View>
-    );
-  }
-}
