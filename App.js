@@ -9,11 +9,11 @@ export default class App extends Component {
     this.state = {
       pizza: 0,
       pizzas : [
-        {key: 1, nome: 'Calabresa', valor: '39,99'},
-        {key: 2, nome: 'Brigadeiro', valor: '29,99'},
-        {key: 3, nome: 'Lombo Paulista', valor: '49,99'},
-        {key: 4, nome: 'Quatro queijos', valor: '79,99'},
-        {key: 5, nome: 'Portuguesa', valor: '59,99'},
+        {key: 1, nome: 'Calabresa', valor: 39.8},
+        {key: 2, nome: 'Brigadeiro', valor: 29.99},
+        {key: 3, nome: 'Lombo Paulista', valor: 49.7},
+        {key: 4, nome: 'Quatro queijos', valor: 79.4},
+        {key: 5, nome: 'Portuguesa', valor: 59.4},
       ]
     }
   };
@@ -38,7 +38,7 @@ export default class App extends Component {
 
 
         <Text style={cria.pizzas}>Voce escolheu: {this.state.pizzas[this.state.pizza].nome} </Text>
-        <Text style={cria.pizzas}>R$ {this.state.pizzas[this.state.pizza].valor}</Text>
+        <Text style={cria.pizzas}>R$ {this.state.pizzas[this.state.pizza].valor.toFixed(2)}</Text>
       </View>
     );
   }
