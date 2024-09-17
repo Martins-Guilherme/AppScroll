@@ -9,7 +9,10 @@
     "web": "expo start --web"
   },
   "dependencies": {
-    "expo": "~51.0.28",
+    "@expo/cli": "xxx",
+    "@react-native-picker/picker": "^2.7.5",
+    "expo": "^51.0.32",
+    "expo-sms": "^12.0.1",
     "expo-status-bar": "~1.12.1",
     "react": "18.2.0",
     "react-native": "0.74.5"
