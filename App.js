@@ -7,7 +7,7 @@ export default class App extends Component {
   constructor(props){
     super(props);
     this.state = {
-      valor: 0,
+      valor: 50,
     }
   };
   
@@ -16,13 +16,13 @@ export default class App extends Component {
     return (
       <View style={cria.container}>
         <Slider
-        minimumTrackImage={0}
-        maximumTrackImage={100}
+        minimumValue={0}
+        maximumValue={100}
         onValueChange={(valorSelected) => this.setState({valor: valorSelected}) }
         value={this.state.valor}
         />
 
-        <Text style={{textAlign: 'center', fontSize: 30}}> {this.state.valor} </Text>
+        <Text style={{textAlign: 'center', fontSize: 30}}> {this.state.valor.toFixed(0)} </Text>
       </View>
     );
   }
