@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@expo/cli": "xxx",
+    "@react-native-community/slider": "^4.5.3",
     "@react-native-picker/picker": "^2.7.5",
     "expo": "^51.0.32",
     "expo-sms": "^12.0.1",
